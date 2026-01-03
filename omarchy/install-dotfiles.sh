@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ORIGINAL_DIR=$(pwd)
-REPO_URL = "https://github.com/Aydiniyom/dotfiles"
+REPO_URL="https://github.com/Aydiniyom/dotfiles"
 REPO_NAME="dotfiles"
 
 PATHS_TO_REMOVE=(
