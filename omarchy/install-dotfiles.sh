@@ -23,10 +23,11 @@ fi
 cd ~
 
 if [ -d "$REPO_NAME" ]; then
-    echo "Repository '$REPO_NAME' already exists. Skipping clone"
-else
-    git clone "$REPO_URL"
+    echo "Repository '$REPO_NAME' already exists. Deleting"
+    rm -rf "$REPO_NAME"
 fi
+
+git clone "$REPO_URL"
 
 if [ $? -eq 0 ]; then
     echo "Removing old configurations..."
