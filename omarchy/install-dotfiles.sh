@@ -9,11 +9,6 @@ PATHS_TO_REMOVE=(
     "$HOME/.config/hypr/hyprlock.conf" 
     "$HOME/.config/hypr/input.conf" 
     "$HOME/.config/hypr/looknfeel.conf"
-    
-)
-
-FOLDERS_TO_REMOVE=(
-    "$HOME/.config/omarchy/current/theme/backgrounds"
 )
 
 is_stow_installed() {
@@ -43,18 +38,6 @@ if [ $? -eq 0 ]; then
         if [ -e "$path" ] || [ -L "$path" ]; then
             echo "Removing: $path"
             rm -f "$path"
-        else
-            echo "Skipping (does not exist): $path"
-        fi
-    done
-
-    for folder in "${FOLDERS_TO_REMOVE[@]}"; do
-        
-        [ -z "$path" ] && continue
-
-        if [ -e "$path" ] || [ -L "$path" ]; then
-            echo "Removing: $path"
-            rm -rf "$path"
         else
             echo "Skipping (does not exist): $path"
         fi
