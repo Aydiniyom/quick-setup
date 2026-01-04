@@ -11,6 +11,8 @@ PATHS_TO_REMOVE=(
     "$HOME/.config/hypr/looknfeel.conf"
 )
 
+BAK_DIR="$ORIGINAL_DIR/bak"
+
 is_stow_installed() {
     pacman -Qi "stow" &> /dev/null
 }
@@ -18,6 +20,17 @@ is_stow_installed() {
 if ! is_stow_installed; then
     echo "Install stow first."
     exit 1
+fi
+
+if [ -d "$BAK_DIR" ]; then
+    echo "Removing previous backups at: $BAK_DIR"
+    rm -rf $BAK_DIR
+
+    echo "Reinitializing the backup directory"
+    mkdir $BAK_DIR
+else
+    echo "Creating the backup directory at: $BAK_DIR"
+    mkdir $BAK_DIR
 fi
 
 cd ~
@@ -36,6 +49,9 @@ if [ $? -eq 0 ]; then
         [ -z "$path" ] && continue
 
         if [ -e "$path" ] || [ -L "$path" ]; then
+            echo "Backing up '$path' to '$BAK_DIR'"
+            cp "$path" "$BAK_DIR"
+
             echo "Removing: $path"
             rm -f "$path"
         else
@@ -56,3 +72,5 @@ else
     echo "Failed to clone the repository."
     exit 1
 fi
+
+echo "Checkout the '$BAK_DIR' directory if anything went wrong."
