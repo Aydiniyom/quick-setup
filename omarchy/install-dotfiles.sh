@@ -8,7 +8,8 @@ PATHS_TO_REMOVE=(
     "$HOME/.config/hypr/bindings.conf" 
     "$HOME/.config/hypr/hyprlock.conf" 
     "$HOME/.config/hypr/input.conf" 
-    "$HOME/.config/hypr/looknfeel.conf" 
+    "$HOME/.config/hypr/looknfeel.conf"
+    "$HOME/.config/omarchy/current/theme/backgrounds"
 )
 
 is_stow_installed() {
