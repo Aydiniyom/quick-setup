@@ -56,3 +56,6 @@ else
     echo "Failed to clone the repository."
     exit 1
 fi
+
+echo "Set theme to Catppuccin"
+omarchy-theme-set Catppuccin
