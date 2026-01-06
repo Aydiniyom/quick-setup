@@ -1,8 +1,13 @@
 #!/bin/sh
 
-echo "Installing apps..."
-. ./app-installation.sh
+echo "Removing unneccesary apps..."
+. ./remove/master-remove.sh
 echo "Done."
+
+echo "Installing apps..."
+. ./install/master-install.sh
+echo "Done."
+
 echo "Installing dotfiles..."
 . ./install-dotfiles.sh
 echo "Done."

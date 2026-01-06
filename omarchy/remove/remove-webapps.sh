@@ -1,0 +1,1 @@
+omarchy-webapp-remove "Basecamp" "HEY" "Fizzy" "Discord" "Google Contacts" "Google Messages" "Zoom" "X"
