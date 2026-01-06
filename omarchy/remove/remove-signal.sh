@@ -1,3 +1,3 @@
 #!/bin/sh
 
-yay -R --noconfirm obsidian
+yay -R --noconfirm signal-desktop

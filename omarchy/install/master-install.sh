@@ -1,8 +1,8 @@
 #!/bin/sh
 
-. ./install-equibop.sh
-. ./install-stow.sh
-. ./install-telegram.sh
-. ./install-v2ray.sh
-. ./install-zen.sh
-. ./install-webapps.sh
+. ./install/install-equibop.sh
+. ./install/install-stow.sh
+. ./install/install-telegram.sh
+. ./install/install-v2ray.sh
+. ./install/install-zen.sh
+. ./install/install-webapps.sh

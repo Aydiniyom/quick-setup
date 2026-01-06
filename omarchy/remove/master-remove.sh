@@ -1,7 +1,7 @@
 #!/bin/sh
 
-. ./remove-1password.sh
-. ./remove-obsidian.sh
-. ./remove-signal.sh
-. ./remove-spotify.sh
-. ./remove-webapps.sh
+. ./remove/remove-1password.sh
+. ./remove/remove-obsidian.sh
+. ./remove/remove-signal.sh
+. ./remove/remove-spotify.sh
+. ./remove/remove-webapps.sh
